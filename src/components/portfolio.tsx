@@ -164,9 +164,9 @@ const Portfolio = () => {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 rounded-xl bg-gradient-to-r px-4 py-2 text-sm font-medium text-white shadow-lg transition-all hover:scale-105 ${gradient}`}
+                      className={`flex items-center shrink-0 gap-2 rounded-xl bg-gradient-to-r px-4 py-2 text-sm font-medium text-white shadow-lg transition-all hover:scale-105 ${gradient}`}
                     >
-                      <ExternalLink className="h-4 w-4 flex-shrink-0" />
+                      <ExternalLink className="h-4 w-4 " />
                       Live Demo
                     </a>
                     <button
