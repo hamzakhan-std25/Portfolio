@@ -1,0 +1,170 @@
+<svg id="svg-dashboard" viewBox="0 0 1200 700" width="1200" height="700" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="dashBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#090d16"/>
+                                    <stop offset="100%" stop-color="#0f172a"/>
+                                </linearGradient>
+                                <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#06b6d4"/>
+                                    <stop offset="100%" stop-color="#3b82f6"/>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Background -->
+                            <rect width="1200" height="700" fill="url(#dashBg)"/>
+
+                            <!-- Top Navigation Bar -->
+                            <rect x="0" y="0" width="1200" height="65" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+                            
+                            <!-- Logo -->
+                            <g transform="translate(30, 16)">
+                                <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#cyanGradient)"/>
+                                <path d="M 18 6 L 11 18 L 17 18 L 14 26 L 22 14 L 16 14 Z" fill="#ffffff"/>
+                                <text x="44" y="22" font-family="'Inter', sans-serif" font-weight="700" font-size="18" fill="#ffffff">STATION HUB</text>
+                                <text x="180" y="22" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#64748b">|   Station Owner Telemetry Portal</text>
+                            </g>
+
+                            <!-- User Profile / Role Pill -->
+                            <g transform="translate(980, 16)">
+                                <rect x="0" y="0" width="190" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                <circle cx="20" cy="17" r="10" fill="#06b6d4"/>
+                                <text x="14" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#ffffff">SO</text>
+                                <text x="38" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#e2e8f0">Metro Hub #04</text>
+                                <text x="135" y="21" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#38bdf8">OWNER</text>
+                            </g>
+
+                            <!-- Left Side: Station Map & Chargers Grid -->
+                            <g transform="translate(30, 90)">
+                                <!-- Map Frame -->
+                                <rect x="0" y="0" width="700" height="380" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+                                
+                                <!-- Map Decorative Paths (Roads) -->
+                                <path d="M 50 380 C 150 250, 200 200, 350 180 C 500 160, 550 80, 700 40" fill="none" stroke="#1e293b" stroke-width="32"/>
+                                <path d="M 0 150 C 200 150, 300 280, 700 280" fill="none" stroke="#1e293b" stroke-width="24"/>
+                                <path d="M 50 380 C 150 250, 200 200, 350 180 C 500 160, 550 80, 700 40" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="8 8"/>
+
+                                <!-- Charging Bay Icons (Interactive status markers) -->
+                                <!-- Bay 1 (Occupied - Green) -->
+                                <g transform="translate(180, 120)">
+                                    <circle cx="0" cy="0" r="22" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2"/>
+                                    <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#10b981"/>
+                                    <text x="0" y="4" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">C1</text>
+                                    <text x="0" y="34" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#10b981" text-anchor="middle">120 kW</text>
+                                </g>
+
+                                <!-- Bay 2 (Occupied - Green) -->
+                                <g transform="translate(320, 130)">
+                                    <circle cx="0" cy="0" r="22" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="2"/>
+                                    <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#10b981"/>
+                                    <text x="0" y="4" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">C2</text>
+                                    <text x="0" y="34" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#10b981" text-anchor="middle">150 kW</text>
+                                </g>
+
+                                <!-- Bay 3 (Available - Cyan) -->
+                                <g transform="translate(460, 190)">
+                                    <circle cx="0" cy="0" r="22" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-width="2"/>
+                                    <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#06b6d4"/>
+                                    <text x="0" y="4" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">C3</text>
+                                    <text x="0" y="34" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#38bdf8" text-anchor="middle">READY</text>
+                                </g>
+
+                                <!-- Bay 4 (Maintenance - Warning Amber) -->
+                                <g transform="translate(260, 260)">
+                                    <circle cx="0" cy="0" r="22" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+                                    <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#f59e0b"/>
+                                    <text x="0" y="4" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">C4</text>
+                                    <text x="0" y="34" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#fbbf24" text-anchor="middle">MAINT</text>
+                                </g>
+
+                                <!-- Map Legend Overlay -->
+                                <g transform="translate(20, 20)">
+                                    <rect x="0" y="0" width="240" height="40" rx="8" fill="#090d16" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+                                    <circle cx="20" cy="20" r="5" fill="#10b981"/>
+                                    <text x="32" y="24" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Active</text>
+                                    <circle cx="85" cy="20" r="5" fill="#06b6d4"/>
+                                    <text x="97" y="24" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Available</text>
+                                    <circle cx="160" cy="20" r="5" fill="#f59e0b"/>
+                                    <text x="172" y="24" font-family="'Inter', sans-serif" font-size="11" fill="#cbd5e1">Offline</text>
+                                </g>
+                            </g>
+
+                            <!-- Operational Queue Panel (Bottom Left) -->
+                            <g transform="translate(30, 490)">
+                                <rect x="0" y="0" width="700" height="180" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+                                <text x="24" y="32" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#ffffff">OPERATIONAL QUEUE (3 EVs WAITING)</text>
+                                
+                                <!-- Queue Item 1 -->
+                                <g transform="translate(24, 50)">
+                                    <rect x="0" y="0" width="652" height="36" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                    <text x="16" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#38bdf8">#Q-102</text>
+                                    <text x="80" y="22" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#e2e8f0">Tesla Model Y (Fast Charge)</text>
+                                    <text x="300" y="22" font-family="'Inter', sans-serif" font-weight="400" font-size="12" fill="#94a3b8">Assigned: Bay C3</text>
+                                    <rect x="540" y="6" width="96" height="24" rx="12" fill="#10b981" fill-opacity="0.2"/>
+                                    <text x="588" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#10b981" text-anchor="middle">NEXT IN LINE</text>
+                                </g>
+
+                                <!-- Queue Item 2 -->
+                                <g transform="translate(24, 96)">
+                                    <rect x="0" y="0" width="652" height="36" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1"/>
+                                    <text x="16" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#64748b">#Q-103</text>
+                                    <text x="80" y="22" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#cbd5e1">Porsche Taycan (Ultra Fast)</text>
+                                    <text x="300" y="22" font-family="'Inter', sans-serif" font-weight="400" font-size="12" fill="#94a3b8">Estimated Wait: 4 mins</text>
+                                    <rect x="540" y="6" width="96" height="24" rx="12" fill="#3b82f6" fill-opacity="0.2"/>
+                                    <text x="588" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#60a5fa" text-anchor="middle">QUEUED</text>
+                                </g>
+                            </g>
+
+                            <!-- Right Side Telemetry Metrics Panel -->
+                            <g transform="translate(750, 90)">
+                                <rect x="0" y="0" width="420" height="580" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+                                <text x="24" y="36" font-family="'Inter', sans-serif" font-weight="700" font-size="15" fill="#ffffff">STATION TELEMETRY</text>
+                                <text x="24" y="56" font-family="'Inter', sans-serif" font-size="12" fill="#64748b">Real-time load from Firestore database</text>
+
+                                <!-- Metric Box 1: Power Consumption -->
+                                <g transform="translate(24, 80)">
+                                    <rect x="0" y="0" width="372" height="130" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                    <text x="20" y="30" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#94a3b8">Current Power Output</text>
+                                    <text x="20" y="65" font-family="'Inter', sans-serif" font-weight="800" font-size="32" fill="#06b6d4">342.8 <tspan font-size="18" font-weight="500" fill="#94a3b8">kW</tspan></text>
+                                    
+                                    <!-- Mini Bar Chart Visualization -->
+                                    <g transform="translate(200, 30)">
+                                        <rect x="0" y="40" width="16" height="30" rx="3" fill="#334155"/>
+                                        <rect x="24" y="25" width="16" height="45" rx="3" fill="#334155"/>
+                                        <rect x="48" y="10" width="16" height="60" rx="3" fill="#06b6d4"/>
+                                        <rect x="72" y="20" width="16" height="50" rx="3" fill="#06b6d4"/>
+                                        <rect x="96" y="5" width="16" height="65" rx="3" fill="#10b981"/>
+                                        <rect x="120" y="0" width="16" height="70" rx="3" fill="#10b981"/>
+                                    </g>
+                                    <text x="20" y="105" font-family="'Inter', sans-serif" font-size="11" fill="#10b981">↑ +14% peak efficiency vs yesterday</text>
+                                </g>
+
+                                <!-- Metric Box 2: Daily Revenue & Sessions -->
+                                <g transform="translate(24, 230)">
+                                    <rect x="0" y="0" width="176" height="110" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                    <text x="16" y="28" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#94a3b8">Sessions Today</text>
+                                    <text x="16" y="65" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#ffffff">128</text>
+                                    <text x="16" y="92" font-family="'Inter', sans-serif" font-size="11" fill="#38bdf8">Avg duration 22m</text>
+                                </g>
+
+                                <g transform="translate(220, 230)">
+                                    <rect x="0" y="0" width="176" height="110" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                    <text x="16" y="28" font-family="'Inter', sans-serif" font-weight="500" font-size="12" fill="#94a3b8">Occupancy Rate</text>
+                                    <text x="16" y="65" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#10b981">85.4%</text>
+                                    <text x="16" y="92" font-family="'Inter', sans-serif" font-size="11" fill="#10b981">Optimal capacity</text>
+                                </g>
+
+                                <!-- System Log Terminal Preview -->
+                                <g transform="translate(24, 360)">
+                                    <rect x="0" y="0" width="372" height="190" rx="12" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+                                    <rect x="0" y="0" width="372" height="30" rx="12" fill="#1e293b"/>
+                                    <text x="16" y="20" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#94a3b8">FASTAPI TELEMETRY STREAM (WS)</text>
+
+                                    <!-- Code Lines -->
+                                    <text x="16" y="55" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981">[11:42:01] GET /api/v1/telemetry/station-04 200 OK</text>
+                                    <text x="16" y="80" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">[11:42:03] WS :: Telemetry push payload valid (Zod)</text>
+                                    <text x="16" y="105" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fbbf24">[11:42:05] QUEUE :: Assigned #Q-102 -&gt; Charger C3</text>
+                                    <text x="16" y="130" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">[11:42:08] RBAC :: Station Owner token verified</text>
+                                    <text x="16" y="155" font-family="'JetBrains Mono', monospace" font-size="11" fill="#a855f7">[11:42:10] FIRESTORE :: Document sync complete (12ms)</text>
+                                </g>
+                            </g>
+                        </svg>

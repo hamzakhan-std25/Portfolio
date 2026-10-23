@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  @apply scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300;
+}
+
+.dark body {
+  @apply scrollbar-thumb-gray-600 scrollbar-track-gray-800;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Floating badge animations — used in heroSection */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-gentle 5.5s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-gentle 4.5s ease-in-out 0.8s infinite;
+}
+
+/* Scrollbar hidden utility — used in terminal */
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-visible-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,105 @@
+import type { Config } from "tailwindcss";
+const svgToDataUri = require("mini-svg-data-uri");
+const colors = require("tailwindcss/colors");
+const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
+const scrollbar = require("tailwind-scrollbar");
+
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, value]) => [`--${key}`, value])
+  );
+  addBase({ ":root": newVars });
+}
+
+function addSvgPatterns({ matchUtilities, theme }: any) {
+  matchUtilities(
+    {
+      "bg-grid": (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`,
+      }),
+      "bg-grid-small": (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`,
+      }),
+      "bg-dot": (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" cx="10" cy="10" r="1.6257413380501518"/></svg>`
+        )}")`,
+      }),
+    },
+    { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+  );
+}
+
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: { colors: {
+        // High-end Dark Background Frameworks
+        background: "#050506", // Pitch-Black Void
+        card: "#09090b",       // Dark Zinc Container
+        
+        // Brand Identity & System Highlights
+        primary: {
+          DEFAULT: "#4f46e5",  // Electric Indigo (Primary CTAs & Active states)
+          glow: "#6366f1",     // Light Indigo for hover radial backdrops
+        },
+        secondary: {
+          DEFAULT: "#10b981",  // Neon Emerald (System Status, Success logs, Metrics)
+          glow: "#34d399",     // For pulsing hover animations
+        },
+        muted: {
+          DEFAULT: "#71717a",  // Slate text placeholder
+          border: "#1e1e24",   // Premium subtle card borders
+        },
+
+        // Accent & Feedback Colors
+        accent: {
+          DEFAULT: "#facc15",  // Amber for highlights, warnings, and attention
+        }
+        
+      },
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      boxShadow: {
+        input:
+          "0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": { opacity: "0", transform: "translate(-72%, -62%) scale(0.5)" },
+          "100%": { opacity: "1", transform: "translate(-50%,-40%) scale(1)" },
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
+    },
+  },
+  plugins: [
+    addVariablesForColors,
+    addSvgPatterns,
+    scrollbar({ nocompatible: true }),
+  ],
+};
+
+export default config;
