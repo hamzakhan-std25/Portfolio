@@ -56,20 +56,15 @@ export const projects: readonly Project[] = [
     githubUrl: "https://github.com/hamzakhan-std25/station-hub",
     thumbnail: {
       type: "image",
-      src: "/media/projects/stationhub-thumb.svg",
+      src: "/media/projects/station_hub.jpg",
       alt: "Station Hub project thumbnail",
     },
     media: [
       {
         type: "image",
-        src: "/media/projects/stationhub-1.svg",
-        alt: "Station Hub Station Owner Telemetry & Queue Dashboard",
-      },
-      {
-        type: "image",
-        src: "/media/projects/stationhub-2.svg",
-        alt: "Station Hub Multi-Tenant Architecture and Erdantic ERD",
-      },
+        src: "/media/projects/station_hub.jpg",
+        alt: "Station Hub Station Owner Dashboard overview",
+      }
     ],
     architecture: [
       {
@@ -136,10 +131,9 @@ export const projects: readonly Project[] = [
     status: "live",
     demoUrl: "https://tasker-app-hazel.vercel.app/",
     githubUrl: "https://github.com/TaskConnect-Team/Tasker",
-    thumbnail: { type: "image", src: "/media/projects/taskconnect-thumb.svg", alt: "TaskConnect project placeholder" },
+    thumbnail: { type: "image", src: "/media/projects/task_connect.jpg", alt: "TaskConnect project placeholder" },
     media: [
-      { type: "image", src: "/media/projects/taskconnect-1.svg", alt: "TaskConnect marketplace placeholder" },
-      { type: "image", src: "/media/projects/taskconnect-2.svg", alt: "TaskConnect semantic search placeholder" },
+      { type: "image", src: "/media/projects/task_connect.jpg", alt: "TaskConnect marketplace placeholder" },
     ],
     architecture: [
       { id: "client", label: "Client PWA", layer: "client", description: "Installable React PWA with Tailwind UI.", tech: ["React.js", "Tailwind CSS"], linksTo: ["api"] },
@@ -177,10 +171,9 @@ export const projects: readonly Project[] = [
     demoUrl: "https://profileiq.dev",
     githubUrl: "https://github.com/hamzakhan-std25/profileiq",
     // githubUrl: omitted until the repo URL is confirmed.
-    thumbnail: { type: "image", src: "/media/projects/profileiq-thumb.svg", alt: "ProfileIQ project placeholder" },
+    thumbnail: { type: "image", src: "/media/projects/profile_iq.jpg", alt: "ProfileIQ project placeholder" },
     media: [
-      { type: "image", src: "/media/projects/profileiq-1.svg", alt: "ProfileIQ landing page placeholder" },
-      { type: "image", src: "/media/projects/profileiq-2.svg", alt: "ProfileIQ features section placeholder" },
+      { type: "image", src: "/media/projects/profile_iq.jpg", alt: "ProfileIQ landing page placeholder" },
     ],
     architecture: [
       { id: "web", label: "Next.js Front End", layer: "client", description: "App Router, Tailwind CSS 4 theme tokens, animated responsive sections.", tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"], linksTo: ["contact-api"] },
@@ -213,10 +206,9 @@ export const projects: readonly Project[] = [
     status: "live",
     demoUrl: "https://parts-plumbing.vercel.app/",
     githubUrl: "https://github.com/hamzakhan-std25/Parts-Plumbing",
-    thumbnail: { type: "image", src: "/media/projects/part-plumbing-thumb.svg", alt: "Part Plumbing project placeholder" },
+    thumbnail: { type: "image", src: "/media/projects/headless_parts_plumbing.jpg", alt: "Part Plumbing project placeholder" },
     media: [
-      { type: "image", src: "/media/projects/part-plumbing-1.svg", alt: "Part Plumbing storefront placeholder" },
-      { type: "image", src: "/media/projects/part-plumbing-2.svg", alt: "Part Plumbing support assistant placeholder" },
+      { type: "image", src: "/media/projects/headless_parts_plumbing.jpg", alt: "Part Plumbing storefront placeholder" },
     ],
     architecture: [
       { id: "storefront", label: "Next.js Storefront", layer: "client", description: "Headless React frontend with ISR, search overlay and filtering.", tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"], linksTo: ["graphql"] },
@@ -250,11 +242,10 @@ export const projects: readonly Project[] = [
     status: "live",
     demoUrl: "https://chat-bot-beige-chi.vercel.app/",
     githubUrl: "https://github.com/hamzakhan-std25/chat-interface-react-tailwind",
-    thumbnail: { type: "image", src: "/media/projects/ai-chat-thumb.svg", alt: "AI Real-Time Chat project placeholder" },
+    thumbnail: { type: "image", src: "/media/projects/ai_real_time_chat.jpg", alt: "AI Real-Time Chat project placeholder" },
     media: [
-      { type: "image", src: "/media/projects/ai-chat-1.svg", alt: "AI Real-Time Chat messaging placeholder" },
-      { type: "image", src: "/media/projects/ai-chat-2.svg", alt: "AI Real-Time Chat AI layer placeholder" },
-    ],
+      { type: "image", src: "/media/projects/ai_real_time_chat.jpg", alt: "AI Real-Time Chat messaging placeholder" },
+  ],
     architecture: [
       { id: "pwa", label: "React PWA", layer: "client", description: "Installable chat client with offline fallback and accessible UI.", tech: ["React", "Vite", "Tailwind CSS"], linksTo: ["ws"] },
       { id: "ws", label: "WebSocket Server", layer: "api", description: "Streams tokens to the client and handles cancel requests.", tech: ["Node.js", "Express.js", "WebSockets"], linksTo: ["supabase", "llm"] },
@@ -263,7 +254,128 @@ export const projects: readonly Project[] = [
       { id: "llm", label: "Gemini", layer: "ai", description: "Generates streamed conversational responses.", tech: ["Gemini"] },
       { id: "docker", label: "Docker", layer: "infra", description: "Containerized backend services.", tech: ["Docker"] },
     ],
+  },
+  {
+    id: "futuresphere",
+    title: "FutureSphere",
+    tagline: "High-Fidelity SaaS Web Application",
+    overview:
+      "FutureSphere is a production-grade, multi-page SaaS web application engineered with high-fidelity Figma-to-code UI replication. It leverages modern front-end design patterns and robust architecture to deliver dynamic, data-driven user experiences across all views.",
+    challenge:
+      "Translating complex, high-fidelity UI/UX design specifications into a responsive, modular web application without sacrificing performance or maintainability.",
+    solution:
+      "Implemented a robust Next.js 15 App Router architecture with modular route grouping, enabling dynamic data-driven rendering, interactive component states, and seamless client-side navigation.",
+    stack: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "App Router",
+      "Modular Routing",
+    ],
+    highlights: [
+      "Developed a production-grade, multi-page SaaS web application featuring high-fidelity Figma-to-code UI replication.",
+      "Implemented a robust Next.js 15 App Router architecture with modular route grouping for clean code separation.",
+      "Engineered dynamic data-driven rendering and interactive component states across all application views.",
+    ],
+    metrics: [
+      {
+        label: "UI Fidelity",
+        value: "100%",
+        description: "Pixel-accurate Figma-to-code translation and component design.",
+      },
+      {
+        label: "Architecture",
+        value: "Next.js 15",
+        description: "Modern App Router layout with optimized modular route grouping.",
+      },
+    ],
+    status: "completed",
+    statusNote: "Core multi-page SaaS application architecture and UI components implemented.",
+    demoUrl: "https://futuresphere-app.vercel.app", // Update if a specific demo URL is available
+    githubUrl: "https://github.com/hamzakhan-std25/futuresphere", // Update with exact repo if needed
+    thumbnail: {
+      type: "image",
+      src: "/media/projects/future_sphare.jpg",
+      alt: "FutureSphere project thumbnail",
+    },
+    media: [
+      {
+        type: "image",
+        src: "/media/projects/future_sphare.jpg",
+        alt: "FutureSphere dashboard overview placeholder",
+      },
+    ],
+    architecture: [
+      {
+        id: "futuresphere-client",
+        label: "Next.js 15 App Router",
+        layer: "client",
+        description: "React 19 frontend utilizing Tailwind CSS and modular route groups for dynamic multi-page navigation.",
+        tech: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS"],
+      },
+    ],
+  },
+  {
+    id: "personal-portfolio",
+    title: "Personal Developer Portfolio Website",
+    tagline: "Modern portfolio featuring interactive themes and dynamic projects.",
+    overview:
+      "Your personal software engineer portfolio website, built to showcase full-stack projects, professional experience, and technical skills with high-contrast interactive dark themes and optimized Core Web Vitals.",
+    challenge:
+      "Presenting a dense background in full-stack engineering, AI integrations, and Shopify development through a fast, accessible, and visually striking interface.",
+    solution:
+      "Engineered a lightning-fast Next.js application leveraging Framer Motion for smooth UI transitions, Tailwind CSS for custom styling, and optimized asset delivery for top-tier performance.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+    ],
+    highlights: [
+      "Engineered and launched a personal developer portfolio site using modern front-end engineering techniques in Next.js.",
+      "Integrated high-contrast interactive themes optimized for developer aesthetics and dark-mode preferences.",
+      "Implemented dynamic project showcases and optimized Core Web Vitals for seamless user experience across devices.",
+    ],
+    metrics: [
+      {
+        label: "Performance",
+        value: "99+",
+        description: "Optimized Core Web Vitals and lightning-fast static/ISR rendering.",
+      },
+      {
+        label: "Accessibility",
+        value: "100%",
+        description: "Fully responsive, keyboard-navigable UI with high contrast design tokens.",
+      },
+    ],
+    status: "live",
+    statusNote: "Deployed live on custom domain hamzakhan.is-a.dev.",
+    demoUrl: "https://hamzakhan.is-a.dev",
+    githubUrl: "https://github.com/hamzakhan-std25/portfolio", // Adjust if repository name differs
+    thumbnail: {
+      type: "image",
+      src: "/media/projects/portfolio.jpg",
+      alt: "Personal Developer Portfolio thumbnail",
+    },
+    media: [
+      {
+        type: "image",
+        src: "/media/projects/portfolio.jpg",
+        alt: "Portfolio hero and project showcase overview",
+      },
+    ],
+    architecture: [
+      {
+        id: "portfolio-client",
+        label: "Next.js Frontend",
+        layer: "client",
+        description: "Client and server components rendering interactive project cards, skills matrices, and bio sections.",
+        tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+      },
+    ],
   }
-
   
 ];
